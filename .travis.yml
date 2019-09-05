@@ -23,21 +23,22 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
+  keep_history: true
   github-token: $GITHUB_TOKEN
   local-dir: ./_book/ ## 根据情况自定义到静态文件输出目录
-  repo：haodedong/haodedong.github.io
+  repo: haodedong/haodedong.github.io
   verbose: true
   on:
     branch: master
 
-after_script:
-   - cd /_book
-   - git init
-   - git config user.name "haodedong"
-   - git config user.email "haodedong1996@163.com"
-   - git add .
-   - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
-   - git remote add origin https://github.com/haodedong/haodedong.github.io.git
-   - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# after_script:
+#    - cd /_book
+#    - git init
+#    - git config user.name "haodedong"
+#    - git config user.email "haodedong1996@163.com"
+#    - git add .
+#    - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+#    - git remote add origin https://github.com/haodedong/haodedong.github.io.git
+#    - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:${P_BRANCH}
 
 
