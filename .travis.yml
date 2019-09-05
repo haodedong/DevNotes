@@ -26,6 +26,7 @@ deploy:
   keep_history: true
   github-token: $GITHUB_TOKEN
   local-dir: ./_book/ ## 根据情况自定义到静态文件输出目录
+  target_branch: master
   repo: haodedong/haodedong.github.io
   verbose: true
   on:
