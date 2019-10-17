@@ -2,8 +2,7 @@
 
 * [Introduction](README.md)
 * [JavaSE](javase/README.md)
-  * [第一节](javase/seciont1/README.md)
-    * [第一节](javase/seciont1/di-yi-jie.md)
+  * [多线程](javase/multi-thread.md)
   * [第二节](javase/section2.md)
   * [第三节](javase/di-san-jie.md)
 * [JavaWeb](javaweb/README.md)
